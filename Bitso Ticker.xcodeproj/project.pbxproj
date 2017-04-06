@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22340D98602837E77C325870 /* Pods_Bitso_Ticker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E2B5CFB923E9128EADF4BE /* Pods_Bitso_Ticker.framework */; };
 		F469BEBA1E95B8B7001E9F06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469BEB91E95B8B7001E9F06 /* AppDelegate.swift */; };
 		F469BEBC1E95B8B7001E9F06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469BEBB1E95B8B7001E9F06 /* ViewController.swift */; };
 		F469BEBE1E95B8B7001E9F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F469BEBD1E95B8B7001E9F06 /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02E2B5CFB923E9128EADF4BE /* Pods_Bitso_Ticker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitso_Ticker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1010103D8D855942BDFF0D /* Pods-Bitso Ticker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitso Ticker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bitso Ticker/Pods-Bitso Ticker.release.xcconfig"; sourceTree = "<group>"; };
+		BDD17D1AA097456AC62AED6C /* Pods-Bitso Ticker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitso Ticker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bitso Ticker/Pods-Bitso Ticker.debug.xcconfig"; sourceTree = "<group>"; };
 		F469BEB61E95B8B7001E9F06 /* Bitso Ticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitso Ticker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F469BEB91E95B8B7001E9F06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F469BEBB1E95B8B7001E9F06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,17 +31,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22340D98602837E77C325870 /* Pods_Bitso_Ticker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F0FFF1E588D363F5D77D0F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDD17D1AA097456AC62AED6C /* Pods-Bitso Ticker.debug.xcconfig */,
+				9A1010103D8D855942BDFF0D /* Pods-Bitso Ticker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6188CB831323B9D678BC65E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02E2B5CFB923E9128EADF4BE /* Pods_Bitso_Ticker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F469BEAD1E95B8B7001E9F06 = {
 			isa = PBXGroup;
 			children = (
 				F469BEB81E95B8B7001E9F06 /* Bitso Ticker */,
 				F469BEB71E95B8B7001E9F06 /* Products */,
+				0F0FFF1E588D363F5D77D0F6 /* Pods */,
+				6188CB831323B9D678BC65E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F469BEC51E95B8B7001E9F06 /* Build configuration list for PBXNativeTarget "Bitso Ticker" */;
 			buildPhases = (
+				7D1A85465CA838A0D3DC2753 /* [CP] Check Pods Manifest.lock */,
 				F469BEB21E95B8B7001E9F06 /* Sources */,
 				F469BEB31E95B8B7001E9F06 /* Frameworks */,
 				F469BEB41E95B8B7001E9F06 /* Resources */,
+				D137B3EA62A73B883FB47884 /* [CP] Embed Pods Frameworks */,
+				5C9743E3098494E6C0981A27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +153,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C9743E3098494E6C0981A27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitso Ticker/Pods-Bitso Ticker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D1A85465CA838A0D3DC2753 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D137B3EA62A73B883FB47884 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitso Ticker/Pods-Bitso Ticker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F469BEB21E95B8B7001E9F06 /* Sources */ = {
@@ -245,6 +320,7 @@
 		};
 		F469BEC61E95B8B7001E9F06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD17D1AA097456AC62AED6C /* Pods-Bitso Ticker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -258,6 +334,7 @@
 		};
 		F469BEC71E95B8B7001E9F06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A1010103D8D855942BDFF0D /* Pods-Bitso Ticker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
