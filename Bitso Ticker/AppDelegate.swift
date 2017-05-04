@@ -14,6 +14,7 @@ import Foundation
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     let statusItem = NSStatusBar.system().statusItem(withLength: -1)
+    var statusItemText = ""
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.title = "0"
@@ -30,15 +31,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func setBitcoinPrice(){
+        self.statusItemText = ""
         Alamofire.request("https://api.bitso.com/v3/ticker/?book=btc_mxn").responseJSON { response in
             if let result = response.result.value {
                 let JSON = result as! NSDictionary
                 let payload = JSON["payload"] as! NSDictionary
                 let amount = payload["ask"] as! String
-                self.statusItem.title = self.formatBitcoinPrice(price: amount)
+                self.statusItemText = self.statusItemText + " BTC " + self.formatBitcoinPrice(price: amount)
                 print(self.formatBitcoinPrice(price: amount))
+                self.statusItem.title = self.statusItemText
             }
         }
+        
+        Alamofire.request("https://api.bitso.com/v3/ticker/?book=eth_mxn").responseJSON { response in
+            if let result = response.result.value {
+                let JSON = result as! NSDictionary
+                let payload = JSON["payload"] as! NSDictionary
+                let amount = payload["ask"] as! String
+                self.statusItemText = self.statusItemText + " ETH " + self.formatBitcoinPrice(price: amount)
+                print(self.formatBitcoinPrice(price: amount))
+                self.statusItem.title = self.statusItemText
+            }
+        }
+        
+        
     }
     
     func formatBitcoinPrice(price: String) -> String {
