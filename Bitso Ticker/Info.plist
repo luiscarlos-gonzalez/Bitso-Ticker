@@ -28,5 +28,7 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>firebase_key</key>
+	<string>Be6Km9XP3EYpe1pB7IdQqZR9rupX0b5v1362tXFm</string>
 </dict>
 </plist>
